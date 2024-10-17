@@ -1,0 +1,53 @@
+/*selector de tipo etiqueta*/
+*{
+    padding: 0px;
+}
+
+.contenedor{
+    position: relative;
+}
+
+.cuadro{
+    width: 100vw; /*Ancho del viewport*/
+    height: 100vh; /*Alto del viewport*/
+    background-color: blueviolet;
+    transition: backgroud-color 0.3s ease;
+    /*Transición suave para el cambio de color*/
+}
+
+.titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; /*Tamaño predeterminado*/
+}
+
+/*Ancho del viewport*/
+@media screen and (max-with: 768px){
+    /*REGLAS CSS ¿A que se lo voy a aplicar?*/
+    .cuadro{
+        background-color: aquamarine;
+    }
+    .titulo{
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cuadro{
+        background-color: pink;
+    }
+    .titulo{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cuadro{
+        background-color: rgb(86, 185, 82);
+    }
+    .titulo{
+        font-size: 1em;
+    }
+}
